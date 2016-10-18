@@ -1,0 +1,10 @@
+#!/usr/bin/python3.5
+# -*- coding: utf-8 -*-
+import os
+import sys
+args_1 = sys.argv[1]
+os.rename(args_1,"test.c")
+os.system("sdcc test.c ")
+os.system("packihx test.ihx > test.hex")
+os.system("hex2bin test.hex")
+os.system("sudo stcflash test.bin")
