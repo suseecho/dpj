@@ -1,12 +1,15 @@
-#include<reg51.h>
+/*
+ *		无源蜂鸣器
+ */
+#include<8051.h>
 void delay(unsigned int i) ;
 
 void main()
 {
     P1_1 = 1;
-    delay(5);
+    delay(100);
     P1_1 = 0;
-    delay(5);
+    delay(100);
 }
 
 

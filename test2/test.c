@@ -24,6 +24,7 @@ void main(void)
     P0 = 0x90;  // 9
     delay(80);
 
+*/
 /*
     while(1)
     P0 = 0xff;
@@ -51,19 +52,19 @@ void main(void)
 
 //左右跑马灯
     P0 = 0x81;
-    delay(199);
+    delay(99);
     P0 = 0x42;
-    delay(199);
+    delay(99);
     P0 = 0x24;
-    delay(199);
+    delay(99);
     P0 = 0x18;
-    delay(199);
+    delay(99);
     P0 = 0x24;
-    delay(199);
+    delay(99);
     P0 = 0x42;
-    delay(199);
+    delay(99);
     P0 = 0x81;
-    delay(199);
+    delay(99);
 }        
 
 

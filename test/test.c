@@ -1,6 +1,12 @@
+/*
+ *	author: echo
+ *	往返流水灯
+ *	接入: J12
+ */
 #include<8051.h>
 void left();
 void right();
+void beep();
 void delay(unsigned int i)
 
 {
@@ -18,6 +24,7 @@ void main()
 	P0 = 0x01;
 	while(1)
 	{
+		beep();
 		if(d%2 == 0)
 		{
 			left();
@@ -33,14 +40,26 @@ void main()
 	}
 }
 
+
 void left()
 {
 	P0 <<= 1;
-	delay(3000);
+	delay(300);
 }
 
 void right()
 {
 	P0 >>= 1;
-	delay(9000);
+	delay(900);
+}
+void beep()
+{
+	int i = 0 ;
+	for(i = 0 ; i < 55 ; i++)
+	{
+		P1_1 = 1;
+		delay(10);
+		P1_1 = 0;
+		delay(10);
+	}
 }
